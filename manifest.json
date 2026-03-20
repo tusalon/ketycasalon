@@ -1,0 +1,22 @@
+{
+  "name": "Yeney Nails Salón",
+  "short_name": "Yeney Nails",
+  "description": "Uñas y belleza - Tu espacio de cuidado personal",
+  "start_url": "/yeney-nails/",
+  "scope": "/yeney-nails/",
+  "display": "standalone",
+  "background_color": "#ec4899",
+  "theme_color": "#ec4899",
+  "icons": [
+    {
+      "src": "/yeney-nails/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/yeney-nails/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
