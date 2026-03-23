@@ -1,0 +1,22 @@
+{
+  "name": "Sheilitha Beauty",
+  "short_name": "Sheilitha",
+  "description": "Uñas y belleza - Tu espacio de cuidado personal",
+  "start_url": "/sheilitha-beauty/",
+  "scope": "/sheilitha-beauty/",
+  "display": "standalone",
+  "background_color": "#ec4899",
+  "theme_color": "#ec4899",
+  "icons": [
+    {
+      "src": "/sheilitha-beauty/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/sheilitha-beauty/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
