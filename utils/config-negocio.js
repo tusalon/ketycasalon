@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: Ketyca's Salón
+// CLIENTE: Ketyca\'s Salón
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = '742405d7-292e-424a-bd63-f6e6b09fd7d5'; // ID de Ketyca's Salón
+const NEGOCIO_ID_POR_DEFECTO = '742405d7-292e-424a-bd63-f6e6b09fd7d5'; // ID de Ketyca\'s Salón
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -28,18 +28,14 @@ let ultimaActualizacion = 0;
 const CACHE_DURATION = 2 * 60 * 1000; // 2 minutos
 
 /**
- * Obtiene el negocio_id del localStorage o usa el ID por defecto
+ * Obtiene el negocio_id propio de este cliente.
  */
 function getNegocioId() {
-    // 1. Prioridad: lo que haya en localStorage (cuando el admin se loguea)
     const localId = localStorage.getItem('negocioId');
-    if (localId) {
-        console.log('📌 Usando negocioId de localStorage:', localId);
-        return localId;
+    if (localId !== NEGOCIO_ID_POR_DEFECTO) {
+        localStorage.setItem('negocioId', NEGOCIO_ID_POR_DEFECTO);
     }
-    
-    // 2. Si no, usar el ID por defecto
-    console.log('📌 Usando negocioId por defecto (quemado en código):', NEGOCIO_ID_POR_DEFECTO);
+    console.log('📌 Usando negocioId del cliente:', NEGOCIO_ID_POR_DEFECTO);
     return NEGOCIO_ID_POR_DEFECTO;
 }
 
@@ -180,7 +176,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'ketycas-salon';
+    return config?.ntfy_topic || 'ketycasalon';
 };
 
 /**
